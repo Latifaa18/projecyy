@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Студенческий сайт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+        section {
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        /* Функции для интерактива */
+        #quote {
+            font-style: italic;
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Добро пожаловать на студенческий сайт</h1>
+</header>
+
+<nav>
+    <a href="#home">Главная</a>
+    <a href="#courses">Курсы</a>
+    <a href="#events">Мероприятия</a>
+    <a href="#resources">Ресурсы</a>
+    <a href="#about">О сайте</a>
+</nav>
+
+<section id="home">
+    <h2>Новости и объявления</h2>
+    <div class="card">
+        <h3>Новость 1</h3>
+        <p>Здесь будет актуальная информация для студентов.</p>
+    </div>
+    <div class="card">
+        <h3>Новость 2</h3>
+        <p>Объявления и важные новости.</p>
+    </div>
+</section>
+
+<section id="courses">
+    <h2>Мои курсы</h2>
+    <ul>
+        <li>Математика</li>
+        <li>Информатика</li>
+        <li>История</li>
+        <li>Физика</li>
+    </ul>
+</section>
+
+<section id="events">
+    <h2>Календарь мероприятий</h2>
+    <div class="card">
+        <h3>Встреча студенческого совета</h3>
+        <p>Дата: 15 мая 2024</p>
+    </div>
+    <div class="card">
+        <h3>Экскурсия в музей</h3>
+        <p>Дата: 20 мая 2024</p>
+    </div>
+</section>
+
+<section id="resources">
+    <h2>Полезные ресурсы</h2>
+    <ul>
+        <li><a href="#">Библиотека</a></li>
+        <li><a href="#">Учебные материалы</a></li>
+        <li><a href="#">Форум студентов</a></li>
+    </ul>
+</section>
+
+<section id="about">
+    <h2>О сайте</h2>
+    <p>Этот сайт создан для удобства студентов, чтобы делиться новостями, ресурсами и планировать мероприятия.</p>
+</section>
+
+<section>
+    <h2>Цитата дня</h2>
+    <div id="quote">"Образование — ключ к успеху."</div>
+    <button onclick="generateQuote()">Получить случайную цитату</button>
+</section>
+
+<footer>
+    <p>&copy; 2024 Студенческий сайт</p>
+</footer>
+
+<script>
+    const quotes = [
+        "Образование — ключ к успеху.",
+        "Учение — свет, а неучение — тьма.",
+        "Только тот, кто рискует, пьет шампанское.",
+        "Будь лучшей версией себя.",
+        "Никогда не поздно учиться."
+    ];
+
+    function generateQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        document.getElementById('quote').innerText = quotes[randomIndex];
+    }
+</script>
+
+</body>
+</html>
