@@ -1,0 +1,127 @@
+        /* Заголовок сайта с градиентом и тенью */
+        header {
+            background: linear-gradient(90deg, #2980b9, #6dd5fa);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+
+        /* Навигация с эффектами */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 8px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Основные разделы с адаптивностью */
+        section {
+            padding: 30px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Заголовки разделов */
+        section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 10px;
+        }
+
+        /* Карточки с тенями и эффектами */
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+            transform: translateY(-5px);
+        }
+
+        /* Список ресурсов и элементов */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 8px 0;
+            font-size: 1.1em;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #e74c3c;
+        }
+
+        /* Кнопки с эффектами */
+        button {
+            padding: 12px 24px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: #2ecc71;
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+        }
+
+        /* Футер с фиксированным позиционированием и градиентом */
+        footer {
+            background: linear-gradient(90deg, #2c3e50, #34495e);
+            color: #ecf0f1;
+            text-align: center;
+            padding: 15px 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 1em;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        /* Адаптивность для мобильных устройств */
+        @media(max-width: 768px){
+            header h1 {
+                font-size: 2em;
+            }
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 5px 0;
+            }
+        }
